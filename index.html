@@ -4,12 +4,28 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/style.css">
 	<!--Font awesome CDN-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+	 <link rel="stylesheet" href="css/lightslider.css">
+    <!--jquery-->
+    <script src="js/lightslider.min.js"></script>
+    <!--slider js-->
+    <script src="js/lightslider.js"></script>
+	
+	<!--jquery CDN-->
+	
+	<script>
+		$(document).ready(function(){
+            $(".all_dept").click(function(){
+               $(".items").slideToggle(500);
+            });
 
+        });
+
+	</script>
 
 	<title>Shop</title>
 </head>
@@ -30,6 +46,7 @@
 							<li><a href="index.html">HOME</a></li>
 							<li><a href="shop.html">SHOP</a></li>
 							<li><a href="cart.html">CART</a></li>
+							<li><a href="cart.html">BLOG</a></li>
 							<li><a href="contact.html">CONTACT</a></li>
 						</ul>
 					</div>
@@ -97,34 +114,75 @@
 	</section>
 	<!--hero section end-->
 	<!--categories section start-->
-	<section class="categories">
+	<div class="categories">
 		<div class="container2">
-			<div class="row3">
-				<div class="product_card1">
+	<section class="slider">
+    <ul id="autowidth" class="cs-hidden">
+        <li class="item-a">
+            <div class="box">
+        <div class="slide-img">
+             <img src="image/featured_product/bananna.png" alt="">
+             <div>
+                    <button>press here</button>
+             </div>
+        </div>
+    </div>
+        </li>
+        <li class="item-b">
+                <div class="box">
+        <div class="slide-img">
+             <img src="image/featured_product/guava.png" alt="">
+             <div>
+                    <button>press here</button>
+             </div>
+        </div>
+    </div>
+        </li>
+        <li class="item-c">
+                <div class="box">
+        <div class="slide-img">
+             <img src="image/featured_product/mango.png" alt="">
+             <div>
+                    <button>press here</button>
+             </div>
+        </div>
+    </div>
+        </li>
+        <li class="item-d">
+                <div class="box">
+        <div class="slide-img">
+             <img src="image/featured_product/meat.png" alt="">
+             <div>
+                    <button>press here</button>
+             </div>
+        </div>
+    </div>
+        </li>
+        <li class="item-e">
+                <div class="box">
+        <div class="slide-img">
+             <img src="image/featured_product/orenge.png" alt="">
+             <div>
+                    <button>press here</button>
+             </div>
+        </div>
+    </div>
+    </li>
+        <li class="item-f">
+               <div class="box">
+        <div class="slide-img">
+             <img src="image/featured_product/vurger.png" alt="">
+             <div>
+                    <button>press here</button>
+             </div>
+        </div>
+        <li>
 
-					<img src="image/featured_product/meat.png" alt="">
-					<h5><a>fresh meat</a>
-					</h5>
-				</div>
-				<div class="product_card2">
-					<img src="image/featured_product/orenge.png" alt="">
-					<h5><a>fresh orange</a> </h5>
-				</div>
-				<div class="product_card3">
-					<img src="image/featured_product/guava.png" alt="">
-					<h5><a>fresh guava</a></h5>
-				</div>
-				<div class="product_card4">
-					<img src="image/featured_product/vurger.png" alt="">
-
-					<h5><a>fresh orange</a></h5>
-				</div>
-
-			</div>
-
-		</div>
-
+        </li>
+    </ul>
 	</section>
+	</div>
+	</div>
 	<!--categories section end-->
 	<!--featured section start-->
 	<div class="featured">
@@ -417,4 +475,8 @@
 		</div>
 	</div>
 	<!--footer section end-->
-</body></html>
+
+	<script src="js/script.js"></script>
+</body>
+
+</html>
