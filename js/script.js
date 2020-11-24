@@ -3,7 +3,7 @@ $(document).ready(function(){
         autowidth:true,
         loop:true,
         onSliderLoad:function(){
-            $("#autowidth").removeclass("cs-hidden");
+            $("#autowidth").removeClass("cs-hidden");
         }
     })
 
