@@ -58,7 +58,7 @@ li a{
 
 }
 #image {
-    background: #000 url(image/mainbarphoto.png);
+    background: #000 url(../image/mainbarphoto.png);
     background-size: cover;
     overflow: hidden;
     color: #fff;
