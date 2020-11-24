@@ -636,15 +636,15 @@ button[type=submit]{
 /*media query*/
 @media (max-width: 575.98px) {
 	#featured{
-		margin-left: 45px;
+		margin-left: 30px;
 	}
 	#list{
 		font-size: 15px;
 	}
 	#leatest{
-		margin-left: 45px;
+		margin-left: 30px;
 	}	
 	#footer{
-		margin-left: 45px;
+		margin-left: 30px;
 	}
 }
