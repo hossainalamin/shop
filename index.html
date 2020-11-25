@@ -4,21 +4,16 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.css">
-	<!--Font awesome CDN-->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-	<!--Bootstrap-->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/lightslider.css">
+	<link rel="stylesheet" href="css/style.css">
 	<!--jquery-->
 	<script src="js/lightslider.min.js"></script>
 	<!--slider js-->
 	<script src="js/lightslider.js"></script>
 
 	<!--jquery CDN-->
-
 	<script>
 		$(document).ready(function() {
 			$(".all_dept").click(function() {
@@ -34,30 +29,33 @@
 
 <body>
 	<!--header start-->
-	<header class="header">
-		<div class="head">
-			<div class="header_part2">
-				<div class="row1">
-					<div class="header_logo">
-						<a href="index.html">
-							<img src="image/header_logo.png" alt="">
-						</a>
-					</div>
-					<div class="header_menu">
-						<ul>
-							<li><a href="index.html">HOME</a></li>
-							<li><a href="shop.html">SHOP</a></li>
-							<li><a href="cart.html">CART</a></li>
-							<li><a href="blog.html">BLOG</a></li>
-							<li><a href="contact.html">CONTACT</a></li>
-						</ul>
-					</div>
-				</div>
-
+	<nav class="navbar  navbar-light navbar-expand-md">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">
+				<img src="image/header_logo.png" alt="" loading="lazy">
+			</a>
+			<span class="navbar-toggler" class="btn btn-dark" data-toggle="collapse" data-target="#navbarSupportedContent"><i class="fa fa-bars" aria-hidden="true"></i></span>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link  active" href="index.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="shop.html">Shop</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="cart.html">Cart</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="blog.html">Blog</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contact.html">contact</a>
+					</li>
+				</ul>
 			</div>
 		</div>
-	</header>
-	<hr>
+	</nav>
 	<!--header end-->
 	<!--hero section start-->
 	<section class="hero">
@@ -114,368 +112,325 @@
 			</div>
 		</div>
 	</section>
-	<!--hero section end-->
-	<!--categories section start-->
-	<div class="categories">
-		<div class="container2">
-			<section class="slider">
-				<ul id="autowidth" class="cs-hidden">
-					<li class="item-a">
-						<div class="box">
-							<div class="slide-img">
-								<img src="image/featured_product/bananna.png" alt="">
-								<div>
-									<button>press here</button>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="item-b">
-						<div class="box">
-							<div class="slide-img">
-								<img src="image/featured_product/guava.png" alt="">
-								<div>
-									<button>press here</button>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="item-c">
-						<div class="box">
-							<div class="slide-img">
-								<img src="image/featured_product/mango.png" alt="">
-								<div>
-									<button>press here</button>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="item-d">
-						<div class="box">
-							<div class="slide-img">
-								<img src="image/featured_product/meat.png" alt="">
-								<div>
-									<button>press here</button>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="item-e">
-						<div class="box">
-							<div class="slide-img">
-								<img src="image/featured_product/orenge.png" alt="">
-								<div>
-									<button>press here</button>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="item-f">
-						<div class="box">
-							<div class="slide-img">
-								<img src="image/featured_product/vurger.png" alt="">
-								<div>
-									<button>press here</button>
-								</div>
-							</div>
-						</div>
-					</li>
-				</ul>
-			</section>
+	<!--slider-->
+	<div class="container my-4">
+		<div class="row">
+			<div class="col-md-3">
+				<img src="image/featured_product/bananna.png" alt="">
+			</div>
+			<div class="col-md-3">
+				<img src="image/featured_product/bananna.png" alt="">
+			</div>
+			<div class="col-md-3">
+				<img src="image/featured_product/bananna.png" alt="">
+			</div>
+			<div class="col-md-3">
+				<img src="image/featured_product/bananna.png" alt="">
+			</div>
 		</div>
 	</div>
-			<!--categories section end-->
-			<!--featured section start-->
-			<div class="featured">
-				<div class="container3">
-					<div class="row4">
-						<div class="section_title">
-							<h2>Featured Product</h2>
+	<!--slider end-->
+	<!--hero section end-->
+	<!--featured section start-->
+	<div class="featured">
+		<div class="container3">
+			<div class="row4">
+				<div class="section_title">
+					<h2>Featured Product</h2>
+				</div>
+				<div class="featured_control">
+					<ul>
+						<li id="list">All</li>
+						<li id="list">Orenges</li>
+						<li id="list">Fresh Meat</li>
+						<li id="list">Vegetables</li>
+						<li id="list">Fastfood</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row" id="featured">
+				<div class="col-md-3">
+					<div class="card">
+						<div class="card-img">
+							<img src="image/featured_product/watermelon.png" alt="">
 						</div>
-						<div class="featured_control">
-							<ul>
-								<li id="list">All</li>
-								<li id="list">Orenges</li>
-								<li id="list">Fresh Meat</li>
-								<li id="list">Vegetables</li>
-								<li id="list">Fastfood</li>
-							</ul>
-						</div>
-					</div>
-					<div class="row" id="featured">
-						<div class="col-md-3">
-							<div class="card">
-								<div class="card-img">
-									<img src="image/featured_product/watermelon.png" alt="">
-								</div>
-								<div class="card-footer">
-									<h5><a href="#">Crab Pool Security</a></h5>
-									<p>Price:$30.00</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="card">
-								<div class="card-img">
-									<img src="image/featured_product/watermelon.png" alt="">
-								</div>
-								<div class="card-footer">
-									<h5><a href="#">Crab Pool Security</a></h5>
-									<p>Price:$30.00</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="card">
-								<div class="card-img">
-									<img src="image/featured_product/watermelon.png" alt="">
-								</div>
-								<div class="card-footer">
-									<h5><a href="#">Crab Pool Security</a></h5>
-									<p>Price:$30.00</p>
-								</div>
-							</div>
-
-						</div>
-
-						<div class="col-md-3">
-							<div class="card">
-								<div class="card-img">
-									<img src="image/featured_product/watermelon.png" alt="">
-								</div>
-								<div class="card-footer">
-									<h5><a href="#">Crab Pool Security</a></h5>
-									<p>Price:$30.00</p>
-								</div>
-							</div>
-
+						<div class="card-footer">
+							<h5><a href="#">Crab Pool Security</a></h5>
+							<p>Price:$30.00</p>
 						</div>
 					</div>
-					<div class="row" id="featured">
-						<div class="col-md-3">
-							<div class="card">
-								<div class="card-img">
-									<img src="image/featured_product/watermelon.png" alt="">
-								</div>
-								<div class="card-footer">
-									<h5><a href="#">Crab Pool Security</a></h5>
-									<p>Price:$30.00</p>
-								</div>
-							</div>
+				</div>
+				<div class="col-md-3">
+					<div class="card">
+						<div class="card-img">
+							<img src="image/featured_product/watermelon.png" alt="">
 						</div>
-						<div class="col-md-3">
-							<div class="card">
-								<div class="card-img">
-									<img src="image/featured_product/watermelon.png" alt="">
-								</div>
-								<div class="card-footer">
-									<h5><a href="#">Crab Pool Security</a></h5>
-									<p>Price:$30.00</p>
-								</div>
-							</div>
+						<div class="card-footer">
+							<h5><a href="#">Crab Pool Security</a></h5>
+							<p>Price:$30.00</p>
 						</div>
-						<div class="col-md-3">
-							<div class="card">
-								<div class="card-img">
-									<img src="image/featured_product/watermelon.png" alt="">
-								</div>
-								<div class="card-footer">
-									<h5><a href="#">Crab Pool Security</a></h5>
-									<p>Price:$30.00</p>
-								</div>
-							</div>
-
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="card">
+						<div class="card-img">
+							<img src="image/featured_product/watermelon.png" alt="">
 						</div>
+						<div class="card-footer">
+							<h5><a href="#">Crab Pool Security</a></h5>
+							<p>Price:$30.00</p>
+						</div>
+					</div>
 
-						<div class="col-md-3">
-							<div class="card">
-								<div class="card-img">
-									<img src="image/featured_product/watermelon.png" alt="">
-								</div>
-								<div class="card-footer">
-									<h5><a href="#">Crab Pool Security</a></h5>
-									<p>Price:$30.00</p>
-								</div>
-							</div>
+				</div>
 
+				<div class="col-md-3">
+					<div class="card">
+						<div class="card-img">
+							<img src="image/featured_product/watermelon.png" alt="">
+						</div>
+						<div class="card-footer">
+							<h5><a href="#">Crab Pool Security</a></h5>
+							<p>Price:$30.00</p>
 						</div>
 					</div>
 
 				</div>
 			</div>
-		<!--featured section end-->
-		<!---banner start-->
-		<!--banner end-->
-		<!--latest product section start-->
-		<div class="latest_product">
-			<div class="container">
-				<div class="row" id="leatest">
-					<div class="col-md-4">
-						<div class="latest_product">
-							<h4>Latest Product</h4>
-							<div class="latest_slider_product">
-								<a class="latest_product_item">
-									<div class="latest_product_item_pic">
-										<img src="image/latest/pd1.png" alt="latest product">
-									</div>
-									<div class="latest_product_item_text">
-										<h6>Crab Pool Security</h6>
-										<span>$30.00</span>
-									</div>
-								</a>
-								<a class="latest_product_item">
-									<div class="latest_product_item_pic">
-										<img src="image/latest/pd2.png" alt="latest product">
-									</div>
-									<div class="latest_product_item_text">
-										<h6>Crab Pool Security</h6>
-										<span>$30.00</span>
-									</div>
-								</a>
-								<a class="latest_product_item">
-									<div class="latest_product_item_pic">
-										<img src="image/latest/pd3.png" alt="latest product">
-									</div>
-									<div class="latest_product_item_text">
-										<h6>Crab Pool Security</h6>
-										<span>$30.00</span>
-									</div>
-								</a>
-							</div>
+			<div class="row" id="featured">
+				<div class="col-md-3">
+					<div class="card">
+						<div class="card-img">
+							<img src="image/featured_product/watermelon.png" alt="">
+						</div>
+						<div class="card-footer">
+							<h5><a href="#">Crab Pool Security</a></h5>
+							<p>Price:$30.00</p>
 						</div>
 					</div>
-					<div class="col-md-4">
-						<div class="latest_product">
-							<h4>Latest Product</h4>
-							<div class="latest_slider_product">
-								<a class="latest_product_item">
-									<div class="latest_product_item_pic">
-										<img src="image/latest/pd1.png" alt="latest product">
-									</div>
-									<div class="latest_product_item_text">
-										<h6>Crab Pool Security</h6>
-										<span>$30.00</span>
-									</div>
-								</a>
-								<a class="latest_product_item">
-									<div class="latest_product_item_pic">
-										<img src="image/latest/pd2.png" alt="latest product">
-									</div>
-									<div class="latest_product_item_text">
-										<h6>Crab Pool Security</h6>
-										<span>$30.00</span>
-									</div>
-								</a>
-								<a class="latest_product_item">
-									<div class="latest_product_item_pic">
-										<img src="image/latest/pd3.png" alt="latest product">
-									</div>
-									<div class="latest_product_item_text">
-										<h6>Crab Pool Security</h6>
-										<span>$30.00</span>
-									</div>
-								</a>
-							</div>
+				</div>
+				<div class="col-md-3">
+					<div class="card">
+						<div class="card-img">
+							<img src="image/featured_product/watermelon.png" alt="">
+						</div>
+						<div class="card-footer">
+							<h5><a href="#">Crab Pool Security</a></h5>
+							<p>Price:$30.00</p>
 						</div>
 					</div>
-					<div class="col-md-4">
-						<div class="latest_product">
-							<h4>Latest Product</h4>
-							<div class="latest_slider_product">
-								<a class="latest_product_item">
-									<div class="latest_product_item_pic">
-										<img src="image/latest/pd1.png" alt="latest product">
-									</div>
-									<div class="latest_product_item_text">
-										<h6>Crab Pool Security</h6>
-										<span>$30.00</span>
-									</div>
-								</a>
-								<a class="latest_product_item">
-									<div class="latest_product_item_pic">
-										<img src="image/latest/pd2.png" alt="latest product">
-									</div>
-									<div class="latest_product_item_text">
-										<h6>Crab Pool Security</h6>
-										<span>$30.00</span>
-									</div>
-								</a>
-								<a class="latest_product_item">
-									<div class="latest_product_item_pic">
-										<img src="image/latest/pd3.png" alt="latest product">
-									</div>
-									<div class="latest_product_item_text">
-										<h6>Crab Pool Security</h6>
-										<span>$30.00</span>
-									</div>
-								</a>
-							</div>
+				</div>
+				<div class="col-md-3">
+					<div class="card">
+						<div class="card-img">
+							<img src="image/featured_product/watermelon.png" alt="">
+						</div>
+						<div class="card-footer">
+							<h5><a href="#">Crab Pool Security</a></h5>
+							<p>Price:$30.00</p>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-md-3">
+					<div class="card">
+						<div class="card-img">
+							<img src="image/featured_product/watermelon.png" alt="">
+						</div>
+						<div class="card-footer">
+							<h5><a href="#">Crab Pool Security</a></h5>
+							<p>Price:$30.00</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!--featured section end-->
+	<!---banner start-->
+	<!--banner end-->
+	<!--latest product section start-->
+	<div class="latest_product">
+		<div class="container">
+			<div class="row" id="leatest">
+				<div class="col-md-4">
+					<div class="latest_product">
+						<h4>Latest Product</h4>
+						<div class="latest_slider_product">
+							<a class="latest_product_item">
+								<div class="latest_product_item_pic">
+									<img src="image/latest/pd1.png" alt="latest product">
+								</div>
+								<div class="latest_product_item_text">
+									<h6>Crab Pool Security</h6>
+									<span>$30.00</span>
+								</div>
+							</a>
+							<a class="latest_product_item">
+								<div class="latest_product_item_pic">
+									<img src="image/latest/pd2.png" alt="latest product">
+								</div>
+								<div class="latest_product_item_text">
+									<h6>Crab Pool Security</h6>
+									<span>$30.00</span>
+								</div>
+							</a>
+							<a class="latest_product_item">
+								<div class="latest_product_item_pic">
+									<img src="image/latest/pd3.png" alt="latest product">
+								</div>
+								<div class="latest_product_item_text">
+									<h6>Crab Pool Security</h6>
+									<span>$30.00</span>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="latest_product">
+						<h4>Latest Product</h4>
+						<div class="latest_slider_product">
+							<a class="latest_product_item">
+								<div class="latest_product_item_pic">
+									<img src="image/latest/pd1.png" alt="latest product">
+								</div>
+								<div class="latest_product_item_text">
+									<h6>Crab Pool Security</h6>
+									<span>$30.00</span>
+								</div>
+							</a>
+							<a class="latest_product_item">
+								<div class="latest_product_item_pic">
+									<img src="image/latest/pd2.png" alt="latest product">
+								</div>
+								<div class="latest_product_item_text">
+									<h6>Crab Pool Security</h6>
+									<span>$30.00</span>
+								</div>
+							</a>
+							<a class="latest_product_item">
+								<div class="latest_product_item_pic">
+									<img src="image/latest/pd3.png" alt="latest product">
+								</div>
+								<div class="latest_product_item_text">
+									<h6>Crab Pool Security</h6>
+									<span>$30.00</span>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="latest_product">
+						<h4>Latest Product</h4>
+						<div class="latest_slider_product">
+							<a class="latest_product_item">
+								<div class="latest_product_item_pic">
+									<img src="image/latest/pd1.png" alt="latest product">
+								</div>
+								<div class="latest_product_item_text">
+									<h6>Crab Pool Security</h6>
+									<span>$30.00</span>
+								</div>
+							</a>
+							<a class="latest_product_item">
+								<div class="latest_product_item_pic">
+									<img src="image/latest/pd2.png" alt="latest product">
+								</div>
+								<div class="latest_product_item_text">
+									<h6>Crab Pool Security</h6>
+									<span>$30.00</span>
+								</div>
+							</a>
+							<a class="latest_product_item">
+								<div class="latest_product_item_pic">
+									<img src="image/latest/pd3.png" alt="latest product">
+								</div>
+								<div class="latest_product_item_text">
+									<h6>Crab Pool Security</h6>
+									<span>$30.00</span>
+								</div>
+							</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!--latest product section end-->
-		<!--footer section start-->
-		<div class="footer">
-			<div class="container">
-				<div class="row" id="footer">
-					<div class="col-md-4">
-						<div class="footer_img">
-							<img src="image/header_logo.png" alt="footer image">
-						</div>
-						<div class="footer_left_text">
-							<ul>
-								<li>Address: 60-49 Road 11378 New York</li>
-								<li>Phone: +65 11.188.888</li>
-								<li>Email: hello@colorlib.com</li>
-							</ul>
+	</div>
+	<!--latest product section end-->
+	<!--footer section start-->
+	<div class="footer">
+		<div class="container">
+			<div class="row" id="footer">
+				<div class="col-md-4">
+					<div class="footer_img">
+						<img src="image/header_logo.png" alt="footer image">
+					</div>
+					<div class="footer_left_text">
+						<ul>
+							<li>Address: 60-49 Road 11378 New York</li>
+							<li>Phone: +65 11.188.888</li>
+							<li>Email: hello@colorlib.com</li>
+						</ul>
 
-						</div>
 					</div>
-					<div class="col-md-4">
-						<div class="footer_middle">
-							<h5>Useful Links</h5>
-							<ul>
-								<li>About Us</li>
-								<li>About Our Shop</li>
-								<li>Delivery information</li>
-								<li>Our Services</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="footer_last">
-							<div class="footer_last_text">
-								<h5>Join Our Newsletter Now</h5>
-								<p>Get E-mail Updates Bout our latest shop and special offers</p>
-							</div>
-							<div class="footer_last_social">
-								<ul>
-									<li><a href=""><i class="fab fa-facebook"></i></a></li>
-									<li><a href=""><i class="fab fa-instagram"></i></a></li>
-									<li><a href=""><i class="fab fa-twitter"></i></a></li>
-									<li><a href=""><i class="fab fa-linkedin"></i></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-
 				</div>
-				<div class="row">
-					<div class="col-md-4"></div>
-					<div class="col-md-4">
-						<hr style="  color:#fff;opacity: .3; margin: auto;">
-						<div class="row_footer_bottom" id="footer">
-							<p>Copyright ©2020 All rights reserved </p>
+				<div class="col-md-4">
+					<div class="footer_middle">
+						<h5>Useful Links</h5>
+						<ul>
+							<li>About Us</li>
+							<li>About Our Shop</li>
+							<li>Delivery information</li>
+							<li>Our Services</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="footer_last">
+						<div class="footer_last_text">
+							<h5>Join Our Newsletter Now</h5>
+							<p>Get E-mail Updates Bout our latest shop and special offers</p>
 						</div>
+						<div class="footer_last_social">
+							<ul>
+								<li><a href=""><i class="fab fa-facebook"></i></a></li>
+								<li><a href=""><i class="fab fa-instagram"></i></a></li>
+								<li><a href=""><i class="fab fa-twitter"></i></a></li>
+								<li><a href=""><i class="fab fa-linkedin"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="row">
+				<div class="col-md-4"></div>
+				<div class="col-md-4">
+					<hr style="  color:#fff;opacity: .3; margin: auto;">
+					<div class="row_footer_bottom" id="footer">
+						<p>Copyright ©2020 All rights reserved </p>
 					</div>
 				</div>
 			</div>
-			<!--footer section end-->
-			<script src="js/script.js"></script>
 		</div>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<!--footer section end-->
+		<script src="js/script.js"></script>
+	</div>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
