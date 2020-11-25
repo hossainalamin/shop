@@ -641,9 +641,6 @@ button[type=submit]{
 /* footer section end*/
 /*media query*/
 @media (max-width: 575.98px) {
-	#featured{
-		margin-left: 30px;
-	}
 	#list{
 		font-size: 15px;
 	}
