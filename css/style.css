@@ -3,6 +3,17 @@
 *, ::before ,::after{
     box-sizing: border-box;
 }
+.success{
+	font-size: 22px;
+	color: green;
+}
+.error{
+	font-size: 22px;
+	color: red;
+}
+#featuredProduct{
+	text-decoration: none;
+}
 .nav-item {
     margin-left: 1rem;
 	font-size: 20px;
@@ -655,5 +666,21 @@ button[type=submit]{
 	}
 	#phone{
 		margin:10px;
+	}
+	#featuredProduct{
+		margin: 0px;
+		padding: 0px;
+		border: 1px solid #000;
+	}
+	#image{
+		width: 500px;
+		height: 100px;
+	}
+	#table{
+		width: 500px;
+	}
+	#qty{
+		width: 10px;
+		height: 10px;
 	}
 }
