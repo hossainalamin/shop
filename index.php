@@ -8,6 +8,7 @@ include_once"inc/header.php";
 		$addProd = $ct->AddCart($prodId,$quantity); 
 	}
 ?>
+
 <body>
 	<hr>
 	<!--header end-->
@@ -85,12 +86,12 @@ include_once"inc/header.php";
 								<input type="hidden" value="<?php echo $value['productId'];?>" name="id">
 								<br>
 								<input type="submit" class="btn btn-danger mt-3" value="Add to cart" name="buy">
-							</form>
-							<?php
+								<?php
 						if(isset($addProd)){
 							echo $addProd;
 						}
-					?>
+						?>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -127,7 +128,6 @@ include_once"inc/header.php";
 							<h6><?php echo $value['productName'];?></h6>
 							<p>BDT:<?php echo $value['price'];?></p>
 							<a href="detail.php?detail=<?php echo $value['productId'];?>" class="btn btn-outline-dark">Detail</a>
-
 						</div>
 					</div>
 				</div>

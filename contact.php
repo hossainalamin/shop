@@ -67,7 +67,7 @@ include_once"inc/header.php";
 						<div class="card">
 							<div class="card-body">
 								<h4>Get in touch</h4>
-								<p class="lead">Online shopping with BissoBazar</p>
+								<p class="lead">Online shopping with BisasBazar</p>
 								<?php
 								$address = $add->addressList();
 								if($address){
@@ -88,7 +88,6 @@ include_once"inc/header.php";
 				</div>
 			</div>
 		</div>
-
 	</section>
 	<?php
 include_once"inc/footer.php";

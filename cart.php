@@ -100,15 +100,13 @@ if(!isset($_GET['id'])){
 									<td><?php echo $value['productName'];?></td>
 									<td><img src="admin/<?php echo $value['image'];?>" width="80px;" alt="" /></td>
 									<td><?php echo $value['price'];?></td>
-<!--
 									<td>
 										<form action="" method="post">
 											<input type="hidden" name="cartId" value="<?php echo $value['cartId'];?>" />
-											<input type="number" class="border" name="quantity" id="qty" value="<?php echo $value['quantity'];?>" />
-											<input type="submit" class="btn btn-success" name="submit" id="qty" value="Update" />
+											<input type="number" class="border" name="quantity" value="<?php echo $value['quantity'];?>" />
+											<input type="submit" class="btn btn-success" name="submit" value="Update" />
 										</form>
 									</td>
--->
 									<td>
 										<?php
 								$total = $value['price']*$value['quantity'];

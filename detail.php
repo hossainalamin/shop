@@ -1,6 +1,7 @@
 <?php
 include_once"inc/header.php";
 ?>
+
 <body>
 	<hr>
 	<!--header end-->
@@ -67,20 +68,26 @@ include_once"inc/header.php";
 					<p>Price:<?php echo $value['price'];?></p>
 					<p>Detail:<?php echo $value['body'];?></p>
 					<?php
-						if($value['brandName']!= "none"){
+						if($value['brandName']!= "None"){
 					?>
 					<p>Brand:<?php echo $value['brandName'];?></p>
 					<?php }?>
 					<form action="" method="post">
-					Quantity:<input type="number" name="qty" value="1">
-					<input type="submit" class="btn btn-danger" value="Add to cart" name="buy">
+						<table>
+							<tr>
+								<td>Quantity:<input type="number" class="w 25%" name="qty" value="1"></td>
+							</tr>
+							<tr>
+								<td><input type="submit" class="btn btn-danger" value="Add to cart" name="buy"></td>
+							</tr>
+						</table>
 					</form>
-					<?php
+				</div>
+				<?php
 						if(isset($addProd)){
 							echo $addProd;
 						}
 					?>
-				</div>
 
 				<?php } } else { ?>
 				<div class="col-md-4"></div>

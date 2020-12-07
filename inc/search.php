@@ -1,4 +1,4 @@
-					<div class="mainbar" style="margin-bottom:180px;">
+					<div class="mainbar">
 						<div class="hero_search_form">
 							<form action="fsearch.php" method="get">
 								<div class="all_categories">
