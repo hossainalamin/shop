@@ -1,17 +1,14 @@
 <?php
 include_once"inc/header.php";
 ?>
-
 <body>
-	<!--header start-->
-	<?php include "inc/navbar.php"?>
 	<hr>
 	<!--header end-->
 	<!--hero section start-->
 	<section class="main">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-md-4 mb-4">
 					<?php
 					include_once"inc/sidebar.php";
 				?>
@@ -41,26 +38,6 @@ include_once"inc/header.php";
 			</div>
 		</div>
 	</section>
-	<!--slider-->
-	<!--
-	<div class="container my-4">
-		<div class="row">
-			<div class="col-md-3">
-				<img src="image/featured_product/bananna.png" alt="">
-			</div>
-			<div class="col-md-3">
-				<img src="image/featured_product/bananna.png" alt="">
-			</div>
-			<div class="col-md-3">
-				<img src="image/featured_product/bananna.png" alt="">
-			</div>
-			<div class="col-md-3">
-				<img src="image/featured_product/bananna.png" alt="">
-			</div>
-		</div>
-	</div>
--->
-	<!--slider end-->
 	<?php
 	if(isset($_GET)){
 	$prodId  = $_GET['detail'];
@@ -69,7 +46,6 @@ include_once"inc/header.php";
 		$quantity = $_POST['qty'];
 		$addProd = $ct->AddCart($prodId,$quantity); 
 	}
-	
 	?>
 	<!--search-->
 	<section class="detail">
@@ -90,6 +66,11 @@ include_once"inc/header.php";
 					<h5>Product : <?php echo $value['productName'];?></h5>
 					<p>Price:<?php echo $value['price'];?></p>
 					<p>Detail:<?php echo $value['body'];?></p>
+					<?php
+						if($value['brandName']!= "none"){
+					?>
+					<p>Brand:<?php echo $value['brandName'];?></p>
+					<?php }?>
 					<form action="" method="post">
 					Quantity:<input type="number" name="qty" value="1">
 					<input type="submit" class="btn btn-danger" value="Add to cart" name="buy">

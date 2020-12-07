@@ -10,7 +10,7 @@ class Brand
 		$this->db = new Database();
 		$this->fm = new Formate();
 	}
-	public function AddImgae($file){
+	public function AddImage($file){
 		$permitted   = array('jpg','gif','png','jpeg');
 		$fileName    = $file['img']['name'];
 		$fileSize    = $file['img']['size'];
@@ -32,7 +32,7 @@ class Brand
 		}
 		else{
 			move_uploaded_file($fileTemp, $uploadImg);
-			$query  = "insert into tbl_brand(brandName) values('$uploadImg')";
+			$query  = "insert into tbl_brand_img(brandName) values('$uploadImg')";
 			$brandAdd = $this->db->insert($query);
 			if($brandAdd){
 				$brandMsg = "<span class='success'>Imgage Added Successfully</span>";
@@ -43,18 +43,42 @@ class Brand
 			}
 		}
 	}
+	public function AddBrand($brandName){
+		$brandName = $this->fm->validation($brandName);
+		$brandName = mysqli_real_escape_string($this->db->link,$brandName);
+		if(empty($brandName)){
+			$brandMsg = "<span class='error'>Brand Should not be empty</span>";
+			return $brandMsg;
+		}
+		else{
+			$query  = "insert into tbl_brand(brandName) values('$brandName')";
+			$brandAdd = $this->db->insert($query);
+			if($brandAdd){
+				$brandMsg = "<span class='success'>Brand Added Successfully</span>";
+				return $brandMsg;
+			}else{
+				$brandMsg = "<span class='error'>Brand not Added</span>";
+				return $brandMsg;
+			}
+		}
+	}
+	public function BrandListImg(){
+		$query    = "select * from tbl_brand_img order by brandId desc";
+		$brandList  = $this->db->select($query);
+		return $brandList; 
+	}
 	public function BrandList(){
 		$query    = "select * from tbl_brand order by brandId desc";
 		$brandList  = $this->db->select($query);
 		return $brandList; 
 	}
 	public function GetImageById($brandId){
-		$query    = "select * from tbl_brand where brandId = '$brandId'";
+		$query    = "select * from tbl_brand_img where brandId = '$brandId'";
 		$getBrand   = $this->db->select($query);
 		return $getBrand; 
 	}
-	public function DelBrandById($brandId){
-		$query  = "select * from tbl_brand where brandId = '$brandId'";
+	public function DelBrandImgById($brandId){
+		$query  = "select * from tbl_brand_img where brandId = '$brandId'";
 		$getPro = $this->db->select($query);
 		if($getPro){
 			while($delImg = $getPro->fetch_assoc()){
@@ -62,6 +86,18 @@ class Brand
 				unlink($imgLink);
 			}
 		}
+		$query = "delete from tbl_brand_img where brandId = '$brandId'";
+		$del   = $this->db->delete($query);
+		if($del){
+			$delMsg = "<span class='success'>Brand deleted Successfully</span>";
+			return $delMsg;
+		}
+		else{
+			$delMsg = "<span class='error'>Brand not deleted</span>";
+				return $delMsg;
+	}
+    }
+	public function DelBrandById($brandId){
 		$query = "delete from tbl_brand where brandId = '$brandId'";
 		$del   = $this->db->delete($query);
 		if($del){

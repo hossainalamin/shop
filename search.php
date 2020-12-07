@@ -1,17 +1,14 @@
 <?php
 include_once"inc/header.php";
 ?>
-
 <body>
-	<!--header start-->
-	<?php include "inc/navbar.php"?>
 	<hr>
 	<!--header end-->
 	<!--hero section start-->
 	<section class="main">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-md-4 mb-5">
 					<?php
 					include_once"inc/sidebar.php";
 				?>
@@ -41,26 +38,6 @@ include_once"inc/header.php";
 			</div>
 		</div>
 	</section>
-	<!--slider-->
-	<!--
-	<div class="container my-4">
-		<div class="row">
-			<div class="col-md-3">
-				<img src="image/featured_product/bananna.png" alt="">
-			</div>
-			<div class="col-md-3">
-				<img src="image/featured_product/bananna.png" alt="">
-			</div>
-			<div class="col-md-3">
-				<img src="image/featured_product/bananna.png" alt="">
-			</div>
-			<div class="col-md-3">
-				<img src="image/featured_product/bananna.png" alt="">
-			</div>
-		</div>
-	</div>
--->
-	<!--slider end-->
 	<!--search-->
 	<section class="search">
 		<div class="container">
@@ -78,8 +55,8 @@ include_once"inc/header.php";
 						<img src="admin/<?php echo $value['image'];?>" class=".card-img-top img-fluid" alt="">
 						<div class="card-footer">
 							<h5><a href="#"><?php echo $value['productName'];?></a></h5>
-							<p><?php echo $value['price'];?></p>
-							<a href="detail.php?detail=<?php echo $value['productId'];?>" class="btn btn-outline-dark">Shop Now</a>
+							<p>BDT : <?php echo $value['price'];?></p>
+							<a href="detail.php?detail=<?php echo $value['productId'];?>" class="btn btn-outline-dark">Detail</a>
 						</div>
 					</div>
 				</div>

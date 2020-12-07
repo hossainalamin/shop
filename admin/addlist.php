@@ -24,7 +24,7 @@ if(isset($_GET['brandId'])){
 					</thead>
 					<tbody>
 						<?php
-						$brandList = $brand->BrandList();
+						$brandList = $brand->BrandListImg();
 						if($brandList){
 							$count = 0;
 							if($brandList){

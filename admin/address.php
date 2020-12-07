@@ -9,7 +9,7 @@ if(!isset($_GET['cmrId']) or $_GET['cmrId'] == NULL){
     $cId  = $_GET['cmrId'];
 }
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    echo "<script>window.location = 'inbox.php'</script>";
+    echo "<script>window.location = 'order.php'</script>";
 }
 ?>
 <div class="grid_10">
@@ -41,10 +41,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 					<tr>
 						<td>Phone</td>
 						<td><input type="text" readonly="readonly" value="<?php echo $result['phone'];?>" class="medium" /></td>
-					</tr>
-					<tr>
-						<td>Zip Code</td>
-						<td><input type="text" readonly="readonly" value="<?php echo $result['zip'];?>" class="medium" /></td>
 					</tr>
 					<tr>
 						<td>Email</td>

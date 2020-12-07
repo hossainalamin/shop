@@ -37,17 +37,36 @@ class Cart{
 			}
 		}
 	}
-	public function GetComprod($id){
-		$query  = "select * from tbl_compare where cmrId = '$id'";
-		$result = $this->db->select($query);
-		if($result){
-			return $result;
+	public function AddOCart($id,$quantity){
+		$quantity = $this->fm->validation($quantity);
+		$quantity = mysqli_real_escape_string($this->db->link,$quantity);
+		$id       = mysqli_real_escape_string($this->db->link,$id);
+		$sId      = session_id();
+		
+		$query  = "select * from tbl_offer where productId ='$id'";
+		$result = $this->db->select($query)->fetch_assoc();
+		$productName = $result['productName'];
+		$price       = $result['price'];
+		$image       = $result['image'];
+		
+		$check     = "select * from tbl_cart where productId ='$id' and sId = '$sId'";
+		$chkResult = $this->db->select($check);
+		if($chkResult){
+			$msg = "<span style = color:red; font-size:18px;>Product Already Added!</span>";
+			return $msg;
 		}else{
-			return false;
+		$query  = "insert into tbl_cart(sId,productId,productName,price,quantity,image)
+			values('$sId', '$id', '$productName','$price', '$quantity','$image')";
+		$addCart = $this->db->insert($query);
+			if($addCart){
+				echo "<script>window.location = 'cart.php'</script>";
+			}else{
+				echo "<script>window.location = '404.php'</script>";
+			}
 		}
 	}
-	public function GetWishList($id){
-		$query  = "select * from tbl_wish where cmrId = '$id'";
+	public function GetComprod($id){
+		$query  = "select * from tbl_compare where cmrId = '$id'";
 		$result = $this->db->select($query);
 		if($result){
 			return $result;
@@ -111,6 +130,19 @@ class Cart{
 			return $result;
 		}
 	}
+	public function CheckPrice(){
+	    $sum = 0;
+		$sId    = session_id(); 
+		$query  = "select * from tbl_cart where sId = '$sId'";
+		$result = $this->db->select($query);
+		if($result){
+			foreach($result as $price){
+				$sum = $sum+($price['price']*$price['quantity']);
+			}
+			return $sum;
+		}
+	}
+
 	public function CheckOrder($id){
 		$sId    = session_id(); 
 		$query  = "select * from tbl_order where cmrId = '$id'";

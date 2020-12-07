@@ -1,48 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <?php
 include_once"inc/header.php";
 ?>
+
 <body>
-	<!--header start-->
-	<nav class="navbar navbar-light navbar-expand-md">
-		<div class="container">
-			<a href="index.html" class="navbar-brand">
-				<img src="image/header_logo.png" alt="">
-			</a>
-			<span class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent"><i class="fa fa-bars" aria-hidden="true"></i></span>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item ">
-						<a class="nav-link  active" href="index.php">Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link " href="shop.php">Shop</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="cart.php">Cart</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="blog.php">Blog</a>
-					</li>
-					<li class="nav-item active">
-						<a class="nav-link" href="contact.php">contact</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	<!--header end-->
 	<!--image-->
-	<div id="image">
-		<div class="dark-overlay">
-		</div>
-		<h2 style='color: black;'>Feel free to contact us</h2>
+	<div>
+		<img src="image/Background_new.jpg" width="1350px" height="500px" alt="">
 	</div>
 	<hr class="bg-success">
 	<!--contact-->
-
+	<?php 
+	if(isset($_POST['save'])){
+		$contact = $cmr->Contact($_POST);
+	}
+	?>
 	<section id="from">
 		<div class="container">
 			<div class="row">
@@ -50,6 +21,11 @@ include_once"inc/header.php";
 					<form action="" method="post">
 						<div class="card">
 							<div class="card-body text-center">
+								<?php 
+									if(isset($contact)){
+										echo $contact;
+									}
+									?>
 								<h1>Please Fill this form </h1>
 								<br>
 								<div class="row mt-3">
@@ -78,7 +54,7 @@ include_once"inc/header.php";
 										<div class="form-group">
 											<textarea rows="10" cols="30" class="form-control" name="text">
                                             </textarea>
-											<button class="btn btn-block btn-primary mt-3">Send</button>
+											<input type="submit" class="btn btn-block btn-primary mt-3" name="save" value="Send">
 										</div>
 									</div>
 								</div>
@@ -91,14 +67,21 @@ include_once"inc/header.php";
 						<div class="card">
 							<div class="card-body">
 								<h4>Get in touch</h4>
-								<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, molestias.</p>
+								<p class="lead">Online shopping with BissoBazar</p>
+								<?php
+								$address = $add->addressList();
+								if($address){
+									foreach($address as $value){
+								?>
 								<h4>Address</h4>
-								<p>Mirpur</p>
+								<p><?php echo $value['address'];?></p>
 								<h4>Email</h4>
-								<p class="lead">hossainalamin980@gmail.com</p>
+								<p><?php echo $value['email'];?></p>
 								<h4>Phone</h4>
-								<p class="lead mb-2">************</p>
-								<p class="lead">***********</p>
+								<p class="lead mb-2">
+									<?php echo $value['phone'];?>
+								</p>
+								<?php } }?>
 							</div>
 						</div>
 					</div>
@@ -107,6 +90,6 @@ include_once"inc/header.php";
 		</div>
 
 	</section>
-<?php
+	<?php
 include_once"inc/footer.php";
 ?>

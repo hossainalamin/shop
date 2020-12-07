@@ -74,7 +74,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 							<label>Description</label>
 						</td>
 						<td>
-							<textarea class="tinymce" name="body"></textarea>
+							<textarea rows="10" cols="50" name="body"></textarea>
 						</td>
 					</tr>
 					<tr>

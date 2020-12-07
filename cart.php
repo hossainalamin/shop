@@ -18,20 +18,18 @@ if(!isset($_GET['id'])){
 ?>
 
 <body>
-	<!--header start-->
-	<?php include "inc/navbar.php"?>
 	<hr>
 	<!--header end-->
 	<!--hero section start-->
 	<section class="main">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-md-4 mb-5">
 					<?php
 					include_once"inc/sidebar.php";
 				?>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-6 my-5">
 					<?php
 					include_once"inc/search.php";
 					?>
@@ -102,19 +100,20 @@ if(!isset($_GET['id'])){
 									<td><?php echo $value['productName'];?></td>
 									<td><img src="admin/<?php echo $value['image'];?>" width="80px;" alt="" /></td>
 									<td><?php echo $value['price'];?></td>
+<!--
 									<td>
 										<form action="" method="post">
 											<input type="hidden" name="cartId" value="<?php echo $value['cartId'];?>" />
-											<input type="number" name="quantity" id="qty" value="<?php echo $value['quantity'];?>" />
-											<input type="submit" name="submit" id="qty" value="Update" />
+											<input type="number" class="border" name="quantity" id="qty" value="<?php echo $value['quantity'];?>" />
+											<input type="submit" class="btn btn-success" name="submit" id="qty" value="Update" />
 										</form>
 									</td>
+-->
 									<td>
-								<?php
+										<?php
 								$total = $value['price']*$value['quantity'];
 								echo $total;
 								$sum  = $sum + $total;
-								$Gsum = $sum +$sum*.10;
 								$qty  = $qty+$value['quantity'];
 								Session::set("sum", $sum);
 								Session::set("qty", $qty);
@@ -122,12 +121,11 @@ if(!isset($_GET['id'])){
 									</td>
 									<td><a onclick="return confirm('Are you sure to delete!')" ; href="?cartId=<?php echo $value['cartId'];?>" class="btn btn-danger">Delete</a></td>
 								</tr>
-
 								<?php } } ?>
 							</table>
 						</div>
 					</div>
-				<?php 
+					<?php 
 				$checkCart = $ct->CheckCart();
 				if($checkCart){
 				?>
@@ -135,14 +133,6 @@ if(!isset($_GET['id'])){
 						<tr>
 							<th>Sub Total : </th>
 							<td><?php echo $sum;?></td>
-						</tr>
-						<tr>
-							<th>VAT : </th>
-							<td>10%</td>
-						</tr>
-						<tr>
-							<th>Grand Total</th>
-							<td><?php echo $Gsum;?> </td>
 						</tr>
 					</table>
 					<?php } else { 
@@ -157,15 +147,14 @@ if(!isset($_GET['id'])){
 						<div class="col-md-4"></div>
 						<div class="col-md-4"></div>
 						<div class="col-md-4">
-						<?php 
-							$cart = $ct->GetCprod();
-							if($cart){
-								foreach($cart as $data){
+							<?php 
+						$checkCart = $ct->CheckCart();
+						if($checkCart){
 						?>
 							<div class="shopright">
-								<a href="checkout.php?cart=<?php echo $data['cartId'];?>"> <img src="image/check.png" alt="" /></a>
+								<a href="checkout.php"><img src="image/check.png" alt="" /></a>
 							</div>
-							<?php } }?>
+							<?php } ?>
 						</div>
 					</div>
 				</div>

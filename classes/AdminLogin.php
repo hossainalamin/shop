@@ -12,10 +12,6 @@ class AdminLogin{
 	}
 	
 	public function adminLogin($adminUser,$adminPass){
-		$adminUser = $this->fm->validation($adminUser);
-		$adminPass = $this->fm->validation($adminPass);
-		$adminUser = mysqli_real_escape_string($this->db->link,$adminUser);
-		$adminPass = mysqli_real_escape_string($this->db->link,$adminPass);
 		if(empty($adminUser) || empty($adminPass))
 		{
 			$error = "Any of the field should not be empty";
@@ -31,7 +27,7 @@ class AdminLogin{
 				Session::set('adminid',$value['adminId']);
 				Session::set('adminuser',$value['adminUser']);
 				Session::set('adminname',$value['adminName']);
-				echo "<script>window.location = 'dashboard.php'</script>";
+				echo "<script>window.location='dashboard.php'</script>";
 			}else{
 				$error = "Admin not found";
 				return $error;

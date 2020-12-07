@@ -1,6 +1,6 @@
 <?php
 define("DB_HOST","localhost");
-define("DB_USER","root");
-define("DB_PASS","");
-define("DB_NAME","new_shop");
+define("DB_USER","csejnu27_alaminhossain");
+define("DB_PASS","_UHocJ(#vMz3");
+define("DB_NAME","csejnu27_shop");
 ?>

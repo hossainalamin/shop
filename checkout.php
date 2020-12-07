@@ -4,17 +4,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register'])){
 	$addCustomer = $cmr->AddCustomer($_POST);
 }
 ?>
+
 <body>
 	<!--header start-->
-	<?php include "inc/navbar.php"?>
 	<hr>
 	<!--header end-->
 	<!--hero section start-->
 	<section class="main">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4">
-				<?php
+				<div class="col-md-4 mb-5">
+					<?php
 					include_once"inc/sidebar.php";
 				?>
 				</div>
@@ -72,26 +72,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register'])){
 										<div class="form-group">
 											<input type="text" class="form-control" name="name" placeholder="Enter your name">
 										</div>
-									</div>
-									<div class="col-md-6">
 										<div class="form-group">
-											<input type="Email" class="form-control" name="email" placeholder="Enter email">
+											<input type="text" class="form-control" name="city" placeholder="Enter city">
 										</div>
-									</div>
-
-									<div class="col-md-6">
-										<div class="form-group">
-											<input type="text" class="form-control" name="phone" placeholder="Enter Phone">
-										</div>
-									</div>
-									<div class="col-md-6">
 										<div class="form-group">
 											<input type="text" class="form-control" name="address" placeholder="Enter address">
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
-											<input type="text" class="form-control" name="city" placeholder="Enter city">
+											<input type="text" class="form-control" name="phone" placeholder="Enter Phone">
+										</div>
+										<div class="form-group">
+											<input type="Email" class="form-control" name="email" placeholder="Enter email">
 										</div>
 									</div>
 									<div class="col-md-12">

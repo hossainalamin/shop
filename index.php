@@ -1,16 +1,21 @@
 <?php
 include_once"inc/header.php";
 ?>
+<?php
+	if($_SERVER['REQUEST_METHOD']=='POST' and isset($_POST['buy'])){
+		$prodId = $_POST['id'];
+		$quantity = 1;
+		$addProd = $ct->AddCart($prodId,$quantity); 
+	}
+?>
 <body>
-	<!--header start-->
-	<?php include "inc/navbar.php";?>
 	<hr>
 	<!--header end-->
 	<!--hero section start-->
 	<section class="main">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-md-4 mb-5">
 					<?php
 					include_once"inc/sidebar.php";
 				     ?>
@@ -41,7 +46,7 @@ include_once"inc/header.php";
 			</div>
 			<div class="row">
 				<?php 
-					$addList = $brand->BrandList();
+					$addList = $brand->BrandListImg();
 							if($addList){
 								foreach ($addList as $brandImage) {
 				?>
@@ -54,26 +59,6 @@ include_once"inc/header.php";
 			</div>
 		</div>
 	</section>
-	<!--slider-->
-	<!--
-	<div class="container my-4">
-		<div class="row">
-			<div class="col-md-3">
-				<img src="image/featured_product/bananna.png" alt="">
-			</div>
-			<div class="col-md-3">
-				<img src="image/featured_product/bananna.png" alt="">
-			</div>
-			<div class="col-md-3">
-				<img src="image/featured_product/bananna.png" alt="">
-			</div>
-			<div class="col-md-3">
-				<img src="image/featured_product/bananna.png" alt="">
-			</div>
-		</div>
-	</div>
--->
-	<!--slider end-->
 	<!--hero section end-->
 	<!--featured section start-->
 	<div class="featured">
@@ -93,9 +78,19 @@ include_once"inc/header.php";
 					<div class="card m-0 p-0">
 						<img src="admin/<?php echo $value['image'];?>" class=".card-img-top img-fluid" alt="">
 						<div class="card-footer">
-							<h5><a href="#"><?php echo $value['productName'];?></a></h5>
-							<p><?php echo $value['price'];?></p>
-							<a href="detail.php?detail=<?php echo $value['productId'];?>" class="btn btn-outline-primary">Shop Now</a>
+							<h5><?php echo $value['productName'];?></h5>
+							<p>BDT:<?php echo $value['price'];?></p>
+							<a href="detail.php?detail=<?php echo $value['productId'];?>" class="btn btn-outline-primary">Detail</a>
+							<form action="" method="post">
+								<input type="hidden" value="<?php echo $value['productId'];?>" name="id">
+								<br>
+								<input type="submit" class="btn btn-danger mt-3" value="Add to cart" name="buy">
+							</form>
+							<?php
+						if(isset($addProd)){
+							echo $addProd;
+						}
+					?>
 						</div>
 					</div>
 				</div>
@@ -130,8 +125,8 @@ include_once"inc/header.php";
 						</div>
 						<div>
 							<h6><?php echo $value['productName'];?></h6>
-							<p>$30.00</p>
-							<a href="detail.php?detail=<?php echo $value['productId'];?>" class="btn btn-outline-dark">Shop Now</a>
+							<p>BDT:<?php echo $value['price'];?></p>
+							<a href="detail.php?detail=<?php echo $value['productId'];?>" class="btn btn-outline-dark">Detail</a>
 
 						</div>
 					</div>

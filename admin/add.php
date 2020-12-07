@@ -5,7 +5,7 @@ include 'inc/sidebar.php';
 $cat = new Brand();
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
-    $addImage   = $cat->AddImgae($_FILES); 
+    $addImage   = $cat->AddImage($_FILES); 
 }
 ?>
 <div class="grid_10">

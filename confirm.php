@@ -10,14 +10,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['cancel'])){
 ?>
 <body>
 	<!--header start-->
-	<?php include "inc/navbar.php"?>
 	<hr>
 	<!--header end-->
 	<!--hero section start-->
 	<section class="main">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-md-4 mb-5">
 					<?php
 					include_once"inc/sidebar.php";
 				?>

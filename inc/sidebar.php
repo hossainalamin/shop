@@ -1,4 +1,4 @@
-					<div class="sidebar">
+					<div class="sidebar" style="height:450px;">
 						<div class="all_dept">
 							<i class=" fa fa-bars"></i>
 							<span>All departments</span>

@@ -1,13 +1,14 @@
 	<div class="footer">
 		<div class="container">
 			<div class="row" id="footer">
+				<div class="col-md-2"></div>
 				<div class="col-md-4">
 					<div class="footer_img">
-						<img src="image/header_logo.png" alt="footer image">
+						<img src="image/M logo.eps6copy.png" alt="footer image">
 					</div>
 					<div class="footer_left_text">
 						<ul>
-						<?php
+							<?php
 							$address = $add->addressList();
 							if($address){
 								foreach($address as $value){
@@ -21,17 +22,6 @@
 					</div>
 				</div>
 				<div class="col-md-4">
-					<div class="footer_middle">
-						<h5>Useful Links</h5>
-						<ul>
-							<li>About Us</li>
-							<li>About Our Shop</li>
-							<li>Delivery information</li>
-							<li>Our Services</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md-4">
 					<div class="footer_last">
 						<div class="footer_last_text">
 							<h5>Join Our Newsletter Now</h5>
@@ -41,13 +31,13 @@
 							<ul>
 								<li><a href=""><i class="fab fa-facebook"></i></a></li>
 								<li><a href=""><i class="fab fa-instagram"></i></a></li>
-								<li><a href=""><i class="fab fa-twitter"></i></a></li>
+								<li><a href=""><i class="fab fa-youtube"></i></a></li>
 								<li><a href=""><i class="fab fa-linkedin"></i></a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
-
+				<div class="col-md-2"></div>
 			</div>
 			<div class="row">
 				<div class="col-md-4"></div>
@@ -72,6 +62,6 @@
 
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+	</body>
 
-</html>
+	</html>
